@@ -12,7 +12,32 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+//        let parseObject = PFObject(className: "Fruits")
+//        parseObject["name"] = "banana"
+//        parseObject["calories"] = 1030;
+//
+//        parseObject.saveInBackground{(succes, error ) in
+//            if error != nil {
+//                print(error?.localizedDescription)
+//            }else {
+//                print("updated")
+//            }
+//        }
+        
+        let query = PFQuery(className: "Fruits")
+        
+        query.whereKey("name", equalTo: "banana")
+        query.findObjectsInBackground{(objects, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            }else {
+                print(objects)
+            }
+        }
+    
+        
     }
 
 
