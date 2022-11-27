@@ -15,6 +15,7 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var detailPlaceName: UILabel!
     
     @IBOutlet weak var detailPlaceDescription: UILabel!
+    
     @IBOutlet weak var detailPlaceType: UILabel!
     
     
@@ -24,6 +25,9 @@ class DetailsVC: UIViewController {
         super.viewDidLoad()
 
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Add Too", style: UIBarButtonItem.Style.done, target: self, action: #selector(addToo))
+        
+        
+        
     }
     
     @objc func addToo(){
