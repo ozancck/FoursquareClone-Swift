@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3176843E29337365000436C4 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3176843D29337365000436C4 /* PlacesVC.swift */; };
 		31AD4539291E9D2A008623F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD4538291E9D2A008623F1 /* AppDelegate.swift */; };
 		31AD453B291E9D2A008623F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD453A291E9D2A008623F1 /* SceneDelegate.swift */; };
-		31AD453D291E9D2A008623F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD453C291E9D2A008623F1 /* ViewController.swift */; };
+		31AD453D291E9D2A008623F1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD453C291E9D2A008623F1 /* SignUpVC.swift */; };
 		31AD4540291E9D2A008623F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AD453E291E9D2A008623F1 /* Main.storyboard */; };
 		31AD4542291E9D2B008623F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AD4541291E9D2B008623F1 /* Assets.xcassets */; };
 		31AD4545291E9D2B008623F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AD4543291E9D2B008623F1 /* LaunchScreen.storyboard */; };
@@ -19,10 +20,11 @@
 /* Begin PBXFileReference section */
 		0543836BC73AA4BAD561B367 /* Pods_FoursquareClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F85DE2B3D49D19AD6E30285 /* Pods-FoursquareClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareClone.release.xcconfig"; path = "Target Support Files/Pods-FoursquareClone/Pods-FoursquareClone.release.xcconfig"; sourceTree = "<group>"; };
+		3176843D29337365000436C4 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		31AD4535291E9D2A008623F1 /* FoursquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AD4538291E9D2A008623F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31AD453A291E9D2A008623F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31AD453C291E9D2A008623F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31AD453C291E9D2A008623F1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		31AD453F291E9D2A008623F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31AD4541291E9D2B008623F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31AD4544291E9D2B008623F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +67,8 @@
 			children = (
 				31AD4538291E9D2A008623F1 /* AppDelegate.swift */,
 				31AD453A291E9D2A008623F1 /* SceneDelegate.swift */,
-				31AD453C291E9D2A008623F1 /* ViewController.swift */,
+				31AD453C291E9D2A008623F1 /* SignUpVC.swift */,
+				3176843D29337365000436C4 /* PlacesVC.swift */,
 				31AD453E291E9D2A008623F1 /* Main.storyboard */,
 				31AD4541291E9D2B008623F1 /* Assets.xcassets */,
 				31AD4543291E9D2B008623F1 /* LaunchScreen.storyboard */,
@@ -206,8 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31AD453D291E9D2A008623F1 /* ViewController.swift in Sources */,
+				31AD453D291E9D2A008623F1 /* SignUpVC.swift in Sources */,
 				31AD4539291E9D2A008623F1 /* AppDelegate.swift in Sources */,
+				3176843E29337365000436C4 /* PlacesVC.swift in Sources */,
 				31AD453B291E9D2A008623F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

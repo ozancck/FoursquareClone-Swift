@@ -4,13 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,11 +74,67 @@
                     <connections>
                         <outlet property="passwordText" destination="BKE-3W-wIv" id="W9D-wU-2kg"/>
                         <outlet property="usernameText" destination="vwy-DA-qFD" id="BUt-Ph-M4V"/>
+                        <segue destination="M2g-wx-i2o" kind="presentation" identifier="toPlacesVC" modalPresentationStyle="fullScreen" id="zvn-4u-25y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
+        <!--PlacesVC-->
+        <scene sceneID="5tz-eq-ex7">
+            <objects>
+                <viewController id="MbQ-jn-21l" customClass="PlacesVC" customModule="FoursquareClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WK2-7e-WYu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-As-yWm">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gfE-N8-W4L"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfE-N8-W4L" firstAttribute="trailing" secondItem="i4a-As-yWm" secondAttribute="trailing" id="YeR-WA-j1o"/>
+                            <constraint firstItem="i4a-As-yWm" firstAttribute="top" secondItem="gfE-N8-W4L" secondAttribute="top" id="ZEB-wU-O4g"/>
+                            <constraint firstItem="gfE-N8-W4L" firstAttribute="bottom" secondItem="i4a-As-yWm" secondAttribute="bottom" id="eEZ-cq-seL"/>
+                            <constraint firstItem="i4a-As-yWm" firstAttribute="leading" secondItem="gfE-N8-W4L" secondAttribute="leading" id="wrv-ev-MIB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BR4-fW-5su" customClass="Pl"/>
+                    <connections>
+                        <outlet property="tableView" destination="i4a-As-yWm" id="Wu7-EE-XFo"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpVC" modalPresentationStyle="fullScreen" id="LxE-Jr-Wla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hor-Vq-Qwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2222" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YCl-V9-05B">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="M2g-wx-i2o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KCr-9s-JQg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uHe-RF-SBt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MbQ-jn-21l" kind="relationship" relationship="rootViewController" id="kIu-Af-dEI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="004-JP-Dq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290.8396946564885" y="3.5211267605633805"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

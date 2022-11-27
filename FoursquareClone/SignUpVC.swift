@@ -8,10 +8,10 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class SignUpVC: UIViewController {
 
     @IBOutlet weak var usernameText: UITextField!
-    
+     
     @IBOutlet weak var passwordText: UITextField!
     
     override func viewDidLoad() {
@@ -28,8 +28,7 @@ class ViewController: UIViewController {
                 if error != nil {
                     self.makeAlert(titleInput: "error", messageInput: error?.localizedDescription ?? "error")
                 }else {
-                    print("welcome")
-                    print(user?.username)
+                    self.performSegue(withIdentifier: "toPlacesVC", sender: nil)
                 }
                     
             }
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
                     self.makeAlert(titleInput: "error", messageInput: error?.localizedDescription ?? "error")
                 }else {
                     //segue
-                    print("OK")
+                    self.performSegue(withIdentifier: "toPlacesVC", sender: nil)
                 }
             }
             
