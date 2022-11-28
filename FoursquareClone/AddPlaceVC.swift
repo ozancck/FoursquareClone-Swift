@@ -24,7 +24,7 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
 
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.done, target: self, action: #selector(nextTo))
         
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "<Back", style: UIBarButtonItem.Style.done, target: self, action: #selector(backTo))
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.done, target: self, action: #selector(backTo))
         
         placeImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
@@ -46,18 +46,37 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.dismiss(animated: true)
     }
     
-    
-    
-    
-    
 
     
-    
-   
-    
     @objc func nextTo(){
-        self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        
+        if placeNameText.text != "" && placeTypeText.text != "" && descriptionText.text != "" {
+            
+            if let choosenImage = placeImageView.image{
+                
+                let placeModel = PlaceModel.sharedInstance
+                placeModel.placeImage = choosenImage
+                placeModel.placeDescription = descriptionText.text!
+                placeModel.placeType = placeTypeText.text!
+                placeModel.placeName = placeNameText.text!
+                
+            }
+            
+            self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        }else {
+            
+            let alert = UIAlertController(title: "Error", message: "Empty Title Box or No Image", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(okButton)
+            self.present(alert, animated: true)
+            
+        }
+     
     }
+    
+    
+    
+    
     
     @objc func backTo(){
         self.dismiss(animated: true)

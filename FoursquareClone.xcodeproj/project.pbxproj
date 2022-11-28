@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310C027229353A40006EA92F /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C027129353A40006EA92F /* PlaceModel.swift */; };
 		3176843E29337365000436C4 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3176843D29337365000436C4 /* PlacesVC.swift */; };
 		318FF86629338B7200AA8D9F /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318FF86529338B7200AA8D9F /* AddPlaceVC.swift */; };
 		31AD4539291E9D2A008623F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD4538291E9D2A008623F1 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		0543836BC73AA4BAD561B367 /* Pods_FoursquareClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F85DE2B3D49D19AD6E30285 /* Pods-FoursquareClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareClone.release.xcconfig"; path = "Target Support Files/Pods-FoursquareClone/Pods-FoursquareClone.release.xcconfig"; sourceTree = "<group>"; };
+		310C027129353A40006EA92F /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		3176843D29337365000436C4 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		318FF86529338B7200AA8D9F /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 		31AD4535291E9D2A008623F1 /* FoursquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 				318FF86529338B7200AA8D9F /* AddPlaceVC.swift */,
 				31BE926229339FF300644799 /* MapVC.swift */,
 				31BE92642933A84C00644799 /* DetailsVC.swift */,
+				310C027129353A40006EA92F /* PlaceModel.swift */,
 				31AD453E291E9D2A008623F1 /* Main.storyboard */,
 				31AD4541291E9D2B008623F1 /* Assets.xcassets */,
 				31AD4543291E9D2B008623F1 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31AD453D291E9D2A008623F1 /* SignUpVC.swift in Sources */,
+				310C027229353A40006EA92F /* PlaceModel.swift in Sources */,
 				31BE926329339FF300644799 /* MapVC.swift in Sources */,
 				31AD4539291E9D2A008623F1 /* AppDelegate.swift in Sources */,
 				3176843E29337365000436C4 /* PlacesVC.swift in Sources */,
